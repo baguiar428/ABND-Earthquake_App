@@ -3,29 +3,29 @@ package com.example.android.quakereport;
 public class Earthquake {
 
     //Create private variables for Earthquake Class
-    private String mMagnitude;
+    private Double mMagnitude;
 
-    private String mCity;
+    private String mLocation;
 
-    private String mDate;
+    private long mTimeInMilliseconds;
 
 
     //Constructer for Earthquake
-    public Earthquake(String magnitude, String city, String date){
+    public Earthquake(Double magnitude, String location, long timeInMilliseconds){
         mMagnitude = magnitude;
-        mCity = city;
-        mDate = date;
+        mLocation = location;
+        mTimeInMilliseconds = timeInMilliseconds;
     }
 
-    public String getMagnitude() {
+    public Double getMagnitude() {
         return mMagnitude;
     }
 
-    public String getCity() {
-        return mCity;
+    public String getLocation() {
+        return mLocation;
     }
 
-    public String getDate() {
-        return mDate;
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 }
