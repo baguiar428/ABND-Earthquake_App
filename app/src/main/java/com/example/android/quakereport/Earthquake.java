@@ -1,5 +1,7 @@
 package com.example.android.quakereport;
 
+import java.net.URL;
+
 public class Earthquake {
 
     //Create private variables for Earthquake Class
@@ -9,12 +11,19 @@ public class Earthquake {
 
     private long mTimeInMilliseconds;
 
+    private String mUrl;
 
-    //Constructer for Earthquake
-    public Earthquake(Double magnitude, String location, long timeInMilliseconds){
+    /** Constructer for Earthquake
+     * @param magnitude is the magnitude (size) of the earthquake
+     * @param location is the location where the earthquake happened
+     * @param timeInMilliseconds is the time in milliseconds (Epoch) when the earthquake happened
+     * @param url is the website URL to find more details about the earthquake
+     */
+    public Earthquake(Double magnitude, String location, long timeInMilliseconds, String url){
         mMagnitude = magnitude;
         mLocation = location;
         mTimeInMilliseconds = timeInMilliseconds;
+        mUrl = url;
     }
 
     public Double getMagnitude() {
@@ -27,5 +36,9 @@ public class Earthquake {
 
     public long getTimeInMilliseconds() {
         return mTimeInMilliseconds;
+    }
+
+    public String getUrl() {
+        return mUrl;
     }
 }
